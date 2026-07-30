@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Coder Development Kit | Yuvraj Chauhan</title>
+  <meta name="description" content="AI Development Workflow — Transform an initial project idea into a structured AI-assisted development process.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="guide-template.css">
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-left">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <a class="logo" href="../index.html">YC</a>
+      <span class="logo-divider">/</span>
+      <span class="logo-text">Workflows</span>
+    </div>
+    <div class="navbar-center">
+      <button class="search-trigger" id="search-trigger" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <span>Search docs...</span>
+        <kbd>⌘K</kbd>
+      </button>
+    </div>
+    <div class="navbar-right">
+      <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="nav-link-top" title="GitHub projects coming soon...">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ========== LAYOUT ========== -->
+  <div class="layout">
+
+    <aside class="sidebar-left" id="sidebar-left">
+      <nav>
+        <div class="nav-section">
+          <span class="nav-label">Navigation</span>
+          <a href="../index.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🏠</span> Back to Home
+          </a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Guides</span>
+          <a href="website-redesign.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🎨</span> Website Redesign Kit
+          </a>
+          <a href="vibe-coder.html" class="sidebar-link active">
+            <span class="sidebar-link-icon">⚡</span> Vibe Coder Kit
+          </a>
+          <a href="ai-figma-mcp.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🔗</span> AI + Figma MCP
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="content guide-content" id="main-content">
+      <div class="guide-breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Guides</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Vibe Coder Kit</span>
+      </div>
+
+      <header class="guide-header">
+        <h1>Vibe Coder Development Kit</h1>
+        <div class="guide-meta">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Free to use</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 10 min read</span>
+        </div>
+      </header>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Complete Workflow</div>
+        <p>This workflow helps you transform a rough project idea into a complete AI-powered development kit that can build your application module by module with minimal manual intervention.</p>
+      </div>
+
+      <h2 id="step-1"><span class="step-number">1</span> Step 1 — Start a New Project in ChatGPT</h2>
+      <p>Open ChatGPT and create a new chat. Use the following title:</p>
+      
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>New Project: [Your Project Name]</code></pre>
+      </div>
+
+      <p>Now start discussing your project naturally. Don't worry about writing the perfect prompt. Use ChatGPT as your product consultant. Share everything related to your project, including:</p>
+      <ul>
+        <li>Your idea</li>
+        <li>Business goals</li>
+        <li>Target users</li>
+        <li>Features & User flows</li>
+        <li>Technical questions</li>
+        <li>UI/UX ideas</li>
+        <li>Problems you're trying to solve</li>
+      </ul>
+      <p>Continue the discussion until you feel your project is completely clear.</p>
+
+      <h2 id="step-2"><span class="step-number">2</span> Step 2 — Generate the Complete Project Summary</h2>
+      <p>Once you're satisfied with the discussion, ask ChatGPT:</p>
+      
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>Explain my project in detail as if I want to hand it over to another AI.</code></pre>
+      </div>
+
+      <p>ChatGPT will generate a comprehensive project specification, typically including:</p>
+      <ul class="checklist">
+        <li>Project Overview & Problem Statement</li>
+        <li>Goals & Target Audience</li>
+        <li>Features & User Flows</li>
+        <li>Functional & Non-functional Requirements</li>
+        <li>Technical Expectations & Suggested Tech Stack</li>
+        <li>Business Logic</li>
+      </ul>
+      <p>Carefully review this document. If anything is incorrect or missing, continue refining it until you're happy with the final version.</p>
+
+      <h2 id="step-3"><span class="step-number">3</span> Step 3 — Generate Research & Planning Documents</h2>
+      <p>Open Kimi 2.6 (or your preferred large-context model). Select the Instant model (fast response). Paste the complete project summary generated by ChatGPT, then use this prompt:</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>Research this project thoroughly and generate the following Markdown documents:
+• BLUEPRINT.md
+• ARCHITECTURE.md
+• PROJECT_CONTEXT.md
+
+These documents should contain complete technical planning, architecture decisions, module breakdown, implementation approach, dependencies, and overall project context.</code></pre>
+      </div>
+      <p>Review the generated documents and make any necessary corrections.</p>
+
+      <h2 id="step-4"><span class="step-number">4</span> Step 4 — Generate the Complete Development Kit</h2>
+      <p>Open a new chat (e.g., Kimi K3 Chat & Agent). Upload the <code>BLUEPRINT.md</code>, <code>ARCHITECTURE.md</code>, and <code>PROJECT_CONTEXT.md</code> files. Then use the following prompt:</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>I want to build [PROJECT NAME] — [1–2 sentence description].
+Here is the complete project specification.
+Please create a complete AI Development Kit that contains everything required to build this project from start to finish.</code></pre>
+      </div>
+
+      <h3>The kit must include:</h3>
+      <ul>
+        <li><strong>Project Documentation:</strong> Master Guide, Repository Structure, Development Rules, Coding Standards.</li>
+        <li><strong>Development Planning:</strong> Phase-wise roadmap, Module breakdown, Dependency mapping.</li>
+        <li><strong>Development Prompts:</strong> ONE PROMPT PER MODULE containing Role, Context, Requirements, DB changes, API contracts, etc.</li>
+        <li><strong>Context Management:</strong> Context refresh templates, resume prompts.</li>
+        <li><strong>Progress Tracking:</strong> Phase and module checklists.</li>
+        <li><strong>Error Recovery:</strong> Reusable templates for bug fixing, refactoring, and build failures.</li>
+      </ul>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">Important Rule</div>
+        <p>Never combine multiple modules into a single prompt. One module = One prompt = One deliverable. Each prompt must reference the output of the previous module.</p>
+      </div>
+
+      <h2 id="step-5"><span class="step-number">5</span> Step 5 — Start Development</h2>
+      <p>Open Antigevity (or your preferred AI coding agent). Open the downloaded development kit. Locate the file named <code>Starting Prompt.md</code>, copy its contents, and paste it into the AI coding agent.</p>
+      
+      <p>The AI will begin developing the project automatically, following the predefined module sequence. Throughout development it will:</p>
+      <ul>
+        <li>Build one module at a time</li>
+        <li>Follow the generated development prompts</li>
+        <li>Maintain project context</li>
+        <li>Update context summaries</li>
+        <li>Prepare the next module automatically</li>
+      </ul>
+
+      <p>Your role is simply to review the output and continue the workflow. In most cases, all you need to do is reply:</p>
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Response</span>
+        </div>
+        <pre><code>Continue</code></pre>
+      </div>
+
+      <h2 id="final-result">Final Result</h2>
+      <p>By following this workflow, you'll have a fully researched project, professional architecture documentation, a phase-wise development plan, and a self-guided AI development workflow capable of building the project from start to finish with minimal manual intervention.</p>
+
+      <div class="guide-nav">
+        <a href="website-redesign.html" class="guide-nav-item prev">
+          <div class="guide-nav-label">Previous Guide</div>
+          <div class="guide-nav-title">← Website Redesign Kit</div>
+        </a>
+        <a href="ai-figma-mcp.html" class="guide-nav-item next">
+          <div class="guide-nav-label">Next Guide</div>
+          <div class="guide-nav-title">AI + Figma MCP Guide →</div>
+        </a>
+      </div>
+    </main>
+
+    <aside class="sidebar-right" id="sidebar-right">
+      <span class="toc-title">On This Page</span>
+      <a href="#step-1" class="toc-link" data-toc="step-1">1. Start Project</a>
+      <a href="#step-2" class="toc-link" data-toc="step-2">2. Project Summary</a>
+      <a href="#step-3" class="toc-link" data-toc="step-3">3. Research & Planning</a>
+      <a href="#step-4" class="toc-link" data-toc="step-4">4. Generate Dev Kit</a>
+      <a href="#step-5" class="toc-link" data-toc="step-5">5. Start Development</a>
+      <a href="#final-result" class="toc-link" data-toc="final-result">Final Result</a>
+    </aside>
+
+  </div>
+
+  <footer class="footer" id="footer">
+    <p class="footer-brand">Yuvraj Chauhan</p>
+    <p class="footer-role">AI Designer | Developer</p>
+    <p class="footer-tagline">Learn Together • Design Together • Build Together</p>
+    <p class="footer-desc">Helping creators build better products using AI.</p>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

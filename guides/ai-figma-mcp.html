@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI + Figma MCP Guide | Yuvraj Chauhan</title>
+  <meta name="description"
+    content="Complete Beginner Guide: Create a professional Figma Design System using AI, Figma MCP and the Tokens Studio plugin.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="guide-template.css">
+</head>
+
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-left">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+      <a class="logo" href="../index.html">YC</a>
+      <span class="logo-divider">/</span>
+      <span class="logo-text">Workflows</span>
+    </div>
+    <div class="navbar-center">
+      <button class="search-trigger" id="search-trigger" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <span>Search docs...</span>
+        <kbd>⌘K</kbd>
+      </button>
+    </div>
+    <div class="navbar-right">
+      <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="nav-link-top" title="GitHub projects coming soon...">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+        </svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ========== LAYOUT ========== -->
+  <div class="layout">
+
+    <aside class="sidebar-left" id="sidebar-left">
+      <nav>
+        <div class="nav-section">
+          <span class="nav-label">Navigation</span>
+          <a href="../index.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🏠</span> Back to Home
+          </a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Guides</span>
+          <a href="website-redesign.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🎨</span> Website Redesign Kit
+          </a>
+          <a href="vibe-coder.html" class="sidebar-link">
+            <span class="sidebar-link-icon">⚡</span> Vibe Coder Kit
+          </a>
+          <a href="ai-figma-mcp.html" class="sidebar-link active">
+            <span class="sidebar-link-icon">🔗</span> AI + Figma MCP
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="content guide-content" id="main-content">
+      <div class="guide-breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+        <span>Guides</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+        <span>AI + Figma MCP Guide</span>
+      </div>
+
+      <header class="guide-header">
+        <h1>AI + Figma MCP + Tokens Studio</h1>
+        <div class="guide-meta">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg> Complete Beginner Guide</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg> 5 min read</span>
+        </div>
+      </header>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Goal</div>
+        <p>Create a professional Figma Design System using AI, Figma MCP, and the Tokens Studio plugin.</p>
+      </div>
+
+      <h2 id="step-1"><span class="step-number">1</span> Step 1 - Enable Figma MCP</h2>
+      <p>Open your Figma file. In the right sidebar, scroll to the bottom and locate the MCP section. Ensure your MCP
+        connection is active.</p>
+      <div class="guide-image"><img src="../images/MCP.png" alt="Enable Figma MCP"></div>
+
+      <h2 id="step-2"><span class="step-number">2</span> Step 2 - Connect Any AI</h2>
+      <p>Click the MCP settings icon. Choose <strong>Other agents</strong> and copy the MCP server configuration.</p>
+      <div class="guide-image"><img src="../images/select_MCP_agent.png" alt="Select MCP Agent"></div>
+      <p>Paste it into any AI that supports MCP (ChatGPT, Claude, Cursor, Manus, etc.).</p>
+
+      <h2 id="step-3"><span class="step-number">3</span> Step 3 - Generate Personal Access Token</h2>
+      <p>In Figma Home go to <strong>Profile → Settings → Security</strong>. Under Personal access tokens, create a new
+        token.</p>
+      <div class="guide-image"><img src="../images/open_Setting.png" alt="Open Settings"></div>
+      <ul>
+        <li><strong>Token Name:</strong> AI Name (ChatGPT / Claude / Manus)</li>
+        <li><strong>Duration:</strong> 1 day, 30 days or 90 days</li>
+        <li><strong>Permissions:</strong> Uncheck only Profile Information; keep the remaining permissions required by
+          your workflow.</li>
+      </ul>
+      <div class="guide-image"><img src="../images/generate_token.png" alt="Generate Token"></div>
+      <p>Copy the generated token and provide it to your AI when requested.</p>
+
+      <h2 id="step-4"><span class="step-number">4</span> Step 4 - Test the Connection</h2>
+      <p>Verify that the AI can successfully read from your Figma file by using the following prompt:</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>Can you access my connected Figma project? List all pages, frames and styles you can inspect.</code></pre>
+      </div>
+
+      <h2 id="step-5"><span class="step-number">5</span> Step 5 - Extract Design Tokens</h2>
+      <p>Once the connection is verified, ask the AI to extract your design variables into a structured format.</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>Analyze my Figma file and extract reusable Colors, Typography, Spacing, Radius, Shadows and Opacity as design tokens.</code></pre>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">Important Note</div>
+        <p>If the AI cannot directly create Figma Variables, ask it to generate a Design Token JSON compatible with
+          Tokens Studio (DTCG format).</p>
+      </div>
+
+      <h3 id="final-prompt">Final Prompt</h3>
+      <p>Use this comprehensive prompt to get the exact output needed for Tokens Studio:</p>
+
+      <div class="code-block">
+        <div class="code-block-header">
+          <span class="lang">Prompt</span>
+        </div>
+        <pre><code>Analyze my Figma file. Generate a complete Design Token JSON for Tokens Studio including Colors, Typography, Spacing, Radius, Shadows and Opacity. Use semantic naming conventions and output only valid JSON.</code></pre>
+      </div>
+
+      <h2 id="workflow-summary">Final Workflow Summary</h2>
+      <div class="deliverable">
+        <div class="deliverable-title">End-to-End Process</div>
+        <p>Figma Design → MCP → AI Analysis → Design Token JSON → Tokens Studio Import → Export to Native Figma
+          Variables → Build Components.</p>
+      </div>
+
+      <div class="guide-nav">
+        <a href="vibe-coder.html" class="guide-nav-item prev">
+          <div class="guide-nav-label">Previous Guide</div>
+          <div class="guide-nav-title">← Vibe Coder Kit</div>
+        </a>
+        <div class="guide-nav-item next" style="visibility:hidden"></div>
+      </div>
+    </main>
+
+    <aside class="sidebar-right" id="sidebar-right">
+      <span class="toc-title">On This Page</span>
+      <a href="#step-1" class="toc-link" data-toc="step-1">1. Enable Figma MCP</a>
+      <a href="#step-2" class="toc-link" data-toc="step-2">2. Connect Any AI</a>
+      <a href="#step-3" class="toc-link" data-toc="step-3">3. Generate Token</a>
+      <a href="#step-4" class="toc-link" data-toc="step-4">4. Test Connection</a>
+      <a href="#step-5" class="toc-link" data-toc="step-5">5. Extract Tokens</a>
+      <a href="#workflow-summary" class="toc-link" data-toc="workflow-summary">Workflow Summary</a>
+    </aside>
+
+  </div>
+
+  <footer class="footer" id="footer">
+    <p class="footer-brand">Yuvraj Chauhan</p>
+    <p class="footer-role">AI Designer | Developer</p>
+    <p class="footer-tagline">Learn Together • Design Together • Build Together</p>
+    <p class="footer-desc">Helping creators build better products using AI.</p>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+
+</html>

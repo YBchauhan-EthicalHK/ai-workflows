@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Redesign Master Kit | Yuvraj Chauhan</title>
+  <meta name="description" content="End-to-End Website Redesign Master Kit (Research → Strategy → UX → UI → Design System → Developer Handoff)">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="guide-template.css">
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-left">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <a class="logo" href="../index.html">YC</a>
+      <span class="logo-divider">/</span>
+      <span class="logo-text">Workflows</span>
+    </div>
+    <div class="navbar-center">
+      <button class="search-trigger" id="search-trigger" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <span>Search docs...</span>
+        <kbd>⌘K</kbd>
+      </button>
+    </div>
+    <div class="navbar-right">
+      <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="nav-link-top" title="GitHub projects coming soon...">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ========== LAYOUT ========== -->
+  <div class="layout">
+
+    <aside class="sidebar-left" id="sidebar-left">
+      <nav>
+        <div class="nav-section">
+          <span class="nav-label">Navigation</span>
+          <a href="../index.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🏠</span> Back to Home
+          </a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Guides</span>
+          <a href="website-redesign.html" class="sidebar-link active">
+            <span class="sidebar-link-icon">🎨</span> Website Redesign Kit
+          </a>
+          <a href="vibe-coder.html" class="sidebar-link">
+            <span class="sidebar-link-icon">⚡</span> Vibe Coder Kit
+          </a>
+          <a href="ai-figma-mcp.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🔗</span> AI + Figma MCP
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="content guide-content" id="main-content">
+      <div class="guide-breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Guides</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Website Redesign Kit</span>
+      </div>
+
+      <header class="guide-header">
+        <h1>Website Redesign Master Kit</h1>
+        <div class="guide-meta">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Free to use</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 min read</span>
+        </div>
+      </header>
+
+      <p>End-to-End Website Redesign Master Kit (Research → Strategy → UX → UI → Design System → Developer Handoff)</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">How to use this prompt</div>
+        <p>The entire content below (from <strong>Role Definition</strong> to <strong>Non-Negotiable Rules</strong>) is a single, complete prompt. Copy everything and paste it into your AI tool like this:</p>
+        <div class="code-block" style="margin-top: 12px; margin-bottom: 0;">
+          <div class="code-block-header"><span class="lang">Example</span></div>
+          <pre><code>Website URL: xyz.com (whatever you want to research and redesign)
+
+[PASTE ENTIRE PROMPT HERE]</code></pre>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Role Definition</div>
+        <p>You are a Senior Product Designer, UX Strategist, UI Designer, Brand Designer, Information Architect, CRO Specialist, Accessibility Expert, and Frontend Design System Architect with 15+ years of experience designing enterprise products, SaaS platforms, corporate websites, fintech products, ecommerce experiences, and high-converting marketing websites.</p>
+        <p>Your responsibility is not simply to redesign the interface, but to deeply understand the business before making any design decisions.</p>
+        <p>You must think like a consultant, product strategist, UX researcher, visual designer, and frontend architect simultaneously. Every recommendation must be supported by UX reasoning, business logic, accessibility, scalability, and implementation feasibility.</p>
+      </div>
+
+      <h2 id="primary-objective">Primary Objective</h2>
+      <p>Redesign the existing website into a modern, premium, scalable, responsive, and conversion-focused experience while preserving the existing business logic unless explicitly instructed otherwise.</p>
+      <p>The redesign should feel like it was crafted by a top-tier digital product agency—not generated from generic AI templates.</p>
+
+      <h2 id="core-principles">Core Principles</h2>
+      <p>Before creating any design:</p>
+      <ul class="checklist">
+        <li>Understand first.</li>
+        <li>Analyze deeply.</li>
+        <li>Never redesign blindly.</li>
+        <li>Preserve business intent.</li>
+        <li>Improve usability rather than changing the business.</li>
+        <li>Every recommendation must solve a real UX or business problem.</li>
+        <li>Prioritize clarity over decoration.</li>
+        <li>Prioritize usability over trends.</li>
+        <li>Create scalable systems rather than isolated screens.</li>
+      </ul>
+
+      <h2 id="phase-1"><span class="step-number">1</span> Phase 1 — Complete Website Discovery & Research</h2>
+      <p>Analyze the entire website thoroughly before making any recommendations. Do not skip any page, section, interaction, modal, navigation state, or user flow.</p>
+
+      <h3>Business Understanding</h3>
+      <p>Identify and explain:</p>
+      <ul>
+        <li>Business model</li>
+        <li>Company positioning</li>
+        <li>Value proposition</li>
+        <li>Target audience</li>
+        <li>Primary customer personas</li>
+        <li>Customer pain points</li>
+        <li>Business objectives</li>
+        <li>Revenue model</li>
+        <li>Products and services</li>
+        <li>Competitive positioning</li>
+        <li>Brand personality</li>
+        <li>Market differentiation</li>
+      </ul>
+
+      <h3>Website Structure</h3>
+      <p>Analyze:</p>
+      <ul>
+        <li>Sitemap</li>
+        <li>Navigation hierarchy</li>
+        <li>Menu organization</li>
+        <li>Footer structure</li>
+        <li>Internal linking</li>
+        <li>URL structure</li>
+        <li>Page hierarchy</li>
+        <li>Content grouping</li>
+      </ul>
+
+      <h3>User Journey Analysis</h3>
+      <p>Understand:</p>
+      <ul>
+        <li>Primary user journeys</li>
+        <li>Secondary user journeys</li>
+        <li>Conversion funnel</li>
+        <li>Entry pages</li>
+        <li>Exit points</li>
+        <li>Navigation behavior</li>
+        <li>Decision-making process</li>
+        <li>User intent at every stage</li>
+      </ul>
+
+      <h3>Content & Conversion Audit</h3>
+      <p>Review and evaluate clarity, readability, information hierarchy, SEO quality, CTAs, lead generation flows, trust signals, and friction points across all content and conversion elements.</p>
+
+      <div class="deliverable">
+        <div class="deliverable-title">Deliverable 1</div>
+        <p>Produce a detailed <strong>Website Analysis Report</strong> including business overview, target audience, goals, strengths/weaknesses, website structure, content hierarchy, navigation analysis, conversion analysis, and SEO/technical observations.</p>
+      </div>
+
+      <h2 id="phase-2"><span class="step-number">2</span> Phase 2 — Preserve Business Logic</h2>
+      <p>Unless explicitly instructed otherwise, do NOT introduce new business features. Preserve existing navigation, products, services, information architecture, user journeys, content strategy, and business objectives. Focus on improving usability, readability, conversion, visual hierarchy, accessibility, performance, and user confidence.</p>
+
+      <h2 id="phase-3"><span class="step-number">3</span> Phase 3 — Complete UX Audit</h2>
+      <p>Identify every UX issue across the website. Evaluate navigation clarity, layout consistency, typography, visual hierarchy, form usability, and trust elements. For every issue include the problem, why it hurts UX, business impact, recommended improvement, and expected outcome.</p>
+
+      <div class="deliverable">
+        <div class="deliverable-title">Deliverable 2</div>
+        <p>Produce a comprehensive <strong>UX Audit Report</strong>.</p>
+      </div>
+
+      <h2 id="phase-4"><span class="step-number">4</span> Phase 4 — Information Architecture Review</h2>
+      <p>Evaluate sitemap quality, page relationships, navigation depth, content grouping, labeling, and user flow. Recommend improvements while preserving business logic.</p>
+
+      <div class="deliverable">
+        <div class="deliverable-title">Deliverable 3</div>
+        <p><strong>IA Recommendations</strong> and an improved sitemap.</p>
+      </div>
+
+      <h2 id="phase-5"><span class="step-number">5</span> Phase 5 — Define the New Design Direction</h2>
+      <p>Create a unique visual identity. Avoid generic AI layouts, template designs, overused gradients, and trend-only decisions. Define brand personality, visual language (shapes, layout rhythm, card philosophy, imagery), and core design principles.</p>
+
+      <div class="deliverable">
+        <div class="deliverable-title">Deliverable 4</div>
+        <p>Final <strong>Visual Direction Document</strong>.</p>
+      </div>
+
+      <h2 id="phase-6"><span class="step-number">6</span> Phase 6 — Homepage Planning</h2>
+      <p>Redesign every homepage section. For every section provide purpose, user/business goals, content (headline, CTA), layout details across breakpoints, imagery, components, interaction, and accessibility notes.</p>
+
+      <div class="deliverable">
+        <div class="deliverable-title">Deliverable 5</div>
+        <p><strong>Homepage Blueprint</strong>.</p>
+      </div>
+
+      <h2 id="phase-7-14">Remaining Phases</h2>
+      <ul>
+        <li><strong>Phase 7 — Page-by-Page Redesign Strategy:</strong> Document purpose, existing issues, and recommended layout strategy for every page.</li>
+        <li><strong>Phase 8 & 9 — Complete Design System & Component Library:</strong> Create a production-ready system covering color tokens, typography, spacing (8px scale), grids, atomic components, elevation, and motion.</li>
+        <li><strong>Phase 10 — Responsive Strategy:</strong> Design guidelines for Desktop, Laptop, Tablet, and Mobile breakpoints.</li>
+        <li><strong>Phase 11 & 12 — Accessibility & Interactions:</strong> Ensure WCAG compliance and define purposeful, subtle interactions.</li>
+        <li><strong>Phase 13 & 14 — Wireframes & Developer Handoff:</strong> Provide layout recommendations and prepare implementation-ready documentation including tokens, behavior, and responsive rules.</li>
+      </ul>
+
+      <h2 id="final-checklist">Final Output Checklist</h2>
+      <p>The final response must include:</p>
+      <ol>
+        <li>Website Analysis Report</li>
+        <li>Business Understanding</li>
+        <li>Content Audit</li>
+        <li>UX Audit</li>
+        <li>Information Architecture Review</li>
+        <li>Improved Sitemap</li>
+        <li>Homepage Blueprint</li>
+        <li>Page-by-Page Redesign Strategy</li>
+        <li>Wireframe Recommendations</li>
+        <li>Final Visual Design Direction</li>
+        <li>Complete Design System</li>
+        <li>Component Library</li>
+        <li>Responsive Guidelines</li>
+        <li>Accessibility Report</li>
+        <li>Interaction & Motion Specifications</li>
+        <li>Developer Handoff Notes</li>
+        <li>Executive Summary</li>
+      </ol>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">Non-Negotiable Rules</div>
+        <p>Think before designing. Never redesign blindly. Analyze every page before making recommendations. Preserve existing business logic. Prioritize usability and clarity over trends and decoration. Create scalable, production-ready systems.</p>
+      </div>
+
+      <div class="guide-nav">
+        <div class="guide-nav-item prev" style="visibility:hidden"></div>
+        <a href="vibe-coder.html" class="guide-nav-item next">
+          <div class="guide-nav-label">Next Guide</div>
+          <div class="guide-nav-title">Vibe Coder Development Kit →</div>
+        </a>
+      </div>
+    </main>
+
+    <aside class="sidebar-right" id="sidebar-right">
+      <span class="toc-title">On This Page</span>
+      <a href="#primary-objective" class="toc-link" data-toc="primary-objective">Primary Objective</a>
+      <a href="#core-principles" class="toc-link" data-toc="core-principles">Core Principles</a>
+      <a href="#phase-1" class="toc-link" data-toc="phase-1">Phase 1: Discovery</a>
+      <a href="#phase-2" class="toc-link" data-toc="phase-2">Phase 2: Business Logic</a>
+      <a href="#phase-3" class="toc-link" data-toc="phase-3">Phase 3: UX Audit</a>
+      <a href="#phase-4" class="toc-link" data-toc="phase-4">Phase 4: IA Review</a>
+      <a href="#phase-5" class="toc-link" data-toc="phase-5">Phase 5: Design Direction</a>
+      <a href="#phase-6" class="toc-link" data-toc="phase-6">Phase 6: Homepage</a>
+      <a href="#phase-7-14" class="toc-link" data-toc="phase-7-14">Remaining Phases</a>
+      <a href="#final-checklist" class="toc-link" data-toc="final-checklist">Final Checklist</a>
+    </aside>
+
+  </div>
+
+  <footer class="footer" id="footer">
+    <p class="footer-brand">Yuvraj Chauhan</p>
+    <p class="footer-role">AI Designer | Developer</p>
+    <p class="footer-tagline">Learn Together • Design Together • Build Together</p>
+    <p class="footer-desc">Helping creators build better products using AI.</p>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

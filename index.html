@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuvraj Chauhan | AI Designer & Developer — Workflows & Guides</title>
+  <meta name="description"
+    content="Practical AI workflows, prompts, and design systems to help designers and developers build better digital products.">
+  <meta name="author" content="Yuvraj Chauhan">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-left">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+      <a class="logo" href="#">YC</a>
+      <span class="logo-divider">/</span>
+      <span class="logo-text">Workflows</span>
+    </div>
+    <div class="navbar-center">
+      <button class="search-trigger" id="search-trigger" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <span>Search docs...</span>
+        <kbd>⌘K</kbd>
+      </button>
+    </div>
+    <div class="navbar-right">
+      <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="nav-link-top" title="GitHub projects coming soon...">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+        </svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ========== LAYOUT ========== -->
+  <div class="layout">
+
+    <!-- Left Sidebar Navigation -->
+    <aside class="sidebar-left" id="sidebar-left">
+      <nav>
+        <div class="nav-section">
+          <span class="nav-label">Getting Started</span>
+          <a href="#hero" class="sidebar-link active" data-section="hero">
+            <span class="sidebar-link-icon">🏠</span> Introduction
+          </a>
+          <a href="#philosophy" class="sidebar-link" data-section="philosophy">
+            <span class="sidebar-link-icon">💡</span> Philosophy
+          </a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Guides</span>
+          <a href="#guides" class="sidebar-link" data-section="guides">
+            <span class="sidebar-link-icon">📚</span> All Guides
+          </a>
+          <a href="#guide-redesign" class="sidebar-link" data-section="guide-redesign">
+            <span class="sidebar-link-icon">🎨</span> Website Redesign Kit
+          </a>
+          <a href="#guide-vibecoder" class="sidebar-link" data-section="guide-vibecoder">
+            <span class="sidebar-link-icon">⚡</span> Vibe Coder Kit
+          </a>
+          <a href="#guide-figma" class="sidebar-link" data-section="guide-figma">
+            <span class="sidebar-link-icon">🔗</span> AI + Figma MCP
+          </a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Connect</span>
+          <a href="#about" class="sidebar-link" data-section="about">
+            <span class="sidebar-link-icon">👤</span> About Me
+          </a>
+          <a href="#community" class="sidebar-link" data-section="community">
+            <span class="sidebar-link-icon">🤝</span> Community
+          </a>
+          <a href="#contact" class="sidebar-link" data-section="contact">
+            <span class="sidebar-link-icon">📬</span> Contact
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content" id="main-content">
+
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Open Source Workflows
+        </div>
+        <h1>Yuvraj Chauhan</h1>
+        <p class="hero-subtitle">AI Designer <span>&</span> Developer</p>
+        <p>Helping designers and developers leverage AI to build better digital products through practical workflows,
+          prompts, and design systems.</p>
+        <div class="hero-buttons">
+          <a href="#guides" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg>
+            Explore Guides
+          </a>
+          <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Connect
+          </a>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY / INTRODUCTION -->
+      <section class="section" id="philosophy">
+        <div class="reveal">
+          <span class="section-label">✦ Philosophy</span>
+          <div class="intro-quote">
+            I believe AI becomes truly powerful when knowledge is shared openly.
+          </div>
+          <p class="intro-text">
+            These guides are based on practical workflows that I use in real projects—from product design and website
+            redesign to AI-assisted development and Figma automation.
+          </p>
+          <p class="intro-text">
+            My goal is simple: help designers and developers learn faster, build smarter, and create better products
+            together.
+          </p>
+        </div>
+      </section>
+
+      <!-- GUIDES / RESOURCE CARDS -->
+      <section class="section" id="guides">
+        <div class="reveal">
+          <span class="section-label">📚 Resources</span>
+          <h2 class="section-title">Workflow Guides</h2>
+          <p class="section-desc">End-to-end practical guides covering design, development, and AI integration
+            workflows.</p>
+        </div>
+
+        <div class="cards-grid">
+
+          <!-- Card 1: Website Redesign -->
+          <article class="resource-card reveal reveal-delay-1" id="guide-redesign">
+            <span class="card-sparkle">✨ Research → Strategy → UX → UI → Design System → Developer Handoff</span>
+            <h3 class="card-title">Website Redesign Master Kit</h3>
+            <div class="card-tags">
+              <span class="card-tag">Complete Website Analysis</span>
+              <span class="card-tag">UX Audit</span>
+              <span class="card-tag">IA Review</span>
+              <span class="card-tag">Homepage Blueprint</span>
+              <span class="card-tag">Design System</span>
+              <span class="card-tag">Developer Handoff</span>
+            </div>
+            <p class="card-desc">This guide covers a complete end-to-end website redesign workflow, starting from
+              business discovery and UX analysis through design systems and implementation-ready handoff documentation.
+            </p>
+            <a href="guides/website-redesign.html" class="card-btn">Read Guide <span>→</span></a>
+          </article>
+
+          <!-- Card 2: Vibe Coder -->
+          <article class="resource-card reveal reveal-delay-2" id="guide-vibecoder">
+            <span class="card-sparkle">✨ AI Development Workflow</span>
+            <h3 class="card-title">Vibe Coder Development Kit</h3>
+            <div class="card-tags">
+              <span class="card-tag">Project Planning</span>
+              <span class="card-tag">Architecture</span>
+              <span class="card-tag">Prompt Engineering</span>
+              <span class="card-tag">Module Development</span>
+              <span class="card-tag">Context Management</span>
+              <span class="card-tag">Error Recovery</span>
+            </div>
+            <p class="card-desc">This workflow shows how to transform an initial project idea into a structured
+              AI-assisted development process with planning documents, module prompts, progress tracking, and context
+              management.</p>
+            <a href="guides/vibe-coder.html" class="card-btn">Read Guide <span>→</span></a>
+          </article>
+
+          <!-- Card 3: AI + Figma MCP -->
+          <article class="resource-card reveal reveal-delay-3" id="guide-figma">
+            <span class="card-sparkle">✨ AI Powered Design System Workflow</span>
+            <h3 class="card-title">AI + Figma MCP Guide</h3>
+            <div class="card-tags">
+              <span class="card-tag">Figma MCP</span>
+              <span class="card-tag">Tokens Studio</span>
+              <span class="card-tag">AI Integration</span>
+              <span class="card-tag">Design Tokens</span>
+              <span class="card-tag">Variables</span>
+              <span class="card-tag">Components</span>
+            </div>
+            <p class="card-desc">This guide explains connecting AI with Figma MCP, generating reusable design tokens,
+              and importing them into Tokens Studio to build scalable design systems.</p>
+            <a href="guides/ai-figma-mcp.html" class="card-btn">Read Guide <span>→</span></a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ABOUT ME -->
+      <section class="section" id="about">
+        <div class="reveal">
+          <span class="section-label">👤 About</span>
+          <div class="about-grid">
+            <div class="about-avatar">YC</div>
+            <div class="about-content">
+              <h2 class="about-name">Yuvraj Chauhan</h2>
+              <p class="about-role">AI Designer | Developer</p>
+              <p>I work at the intersection of design, development, and AI.</p>
+              <p>I enjoy creating practical systems that help teams move from ideas to production faster—whether that's
+                through design systems, AI-powered workflows, prompt engineering, or developer-ready documentation.</p>
+              <p>Everything shared here comes from real-world experimentation and is intended to help others build with
+                greater clarity and efficiency.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMUNITY -->
+      <section class="section" id="community">
+        <div class="reveal">
+          <div class="community-banner">
+            <p class="community-tagline">Learn Together • Design Together • Build Together</p>
+            <h2>Knowledge grows when it's shared.</h2>
+            <p>Whether you're a designer exploring AI, a developer streamlining your workflow, or someone building a new
+              product, these resources are here to help you work more effectively and contribute back to the community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT CTA -->
+      <section class="section" id="contact">
+        <div class="reveal">
+          <div class="cta-box">
+            <h2>Have a project idea?</h2>
+            <p class="cta-subtitle">Let's connect.</p>
+            <p>I'd be happy to share my experience, discuss your product, and help you move from idea to execution.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+              <a href="mailto:chauhanyuvrajsinh457@gmail.com" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email Me
+              </a>
+              <a href="https://wa.me/919428371238" target="_blank" rel="noopener" class="btn btn-primary" style="background: #25D366; color: white; box-shadow: 0 2px 12px rgba(37, 211, 102, 0.3);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Right Sidebar - Table of Contents -->
+    <aside class="sidebar-right" id="sidebar-right">
+      <span class="toc-title">On This Page</span>
+      <a href="#hero" class="toc-link active" data-toc="hero">Introduction</a>
+      <a href="#philosophy" class="toc-link" data-toc="philosophy">Philosophy</a>
+      <a href="#guides" class="toc-link" data-toc="guides">Workflow Guides</a>
+      <a href="#about" class="toc-link" data-toc="about">About Me</a>
+      <a href="#community" class="toc-link" data-toc="community">Community</a>
+      <a href="#contact" class="toc-link" data-toc="contact">Contact</a>
+    </aside>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <p class="footer-brand">Yuvraj Chauhan</p>
+    <p class="footer-role">AI Designer | Developer</p>
+    <p class="footer-tagline">Learn Together • Design Together • Build Together</p>
+    <p class="footer-desc">Helping creators build better products using AI.</p>
+  </footer>
+
+  <!-- ========== SEARCH MODAL ========== -->
+  <div class="search-modal" id="search-modal">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input type="text" class="search-input" id="search-input" placeholder="Search documentation..."
+          autocomplete="off">
+        <kbd
+          style="font-size:0.7rem;padding:2px 8px;background:var(--bg-2);border:1px solid var(--border);border-radius:4px;color:var(--text-3);">Esc</kbd>
+      </div>
+      <div class="search-results" id="search-results">
+        <a href="#hero" class="search-result-item" data-search="introduction yuvraj chauhan ai designer developer">
+          <span class="search-result-icon">🏠</span>
+          <span class="search-result-text">Introduction</span>
+        </a>
+        <a href="#philosophy" class="search-result-item"
+          data-search="philosophy ai knowledge shared openly guides practical workflows">
+          <span class="search-result-icon">💡</span>
+          <span class="search-result-text">Philosophy</span>
+        </a>
+        <a href="#guide-redesign" class="search-result-item"
+          data-search="website redesign master kit ux audit ia review design system developer handoff">
+          <span class="search-result-icon">🎨</span>
+          <span class="search-result-text">Website Redesign Master Kit</span>
+        </a>
+        <a href="#guide-vibecoder" class="search-result-item"
+          data-search="vibe coder development kit ai project planning architecture prompt engineering">
+          <span class="search-result-icon">⚡</span>
+          <span class="search-result-text">Vibe Coder Development Kit</span>
+        </a>
+        <a href="#guide-figma" class="search-result-item"
+          data-search="ai figma mcp tokens studio design tokens variables components">
+          <span class="search-result-icon">🔗</span>
+          <span class="search-result-text">AI + Figma MCP Guide</span>
+        </a>
+        <a href="#about" class="search-result-item" data-search="about me yuvraj chauhan designer developer ai">
+          <span class="search-result-icon">👤</span>
+          <span class="search-result-text">About Me</span>
+        </a>
+        <a href="#contact" class="search-result-item" data-search="contact connect project idea email">
+          <span class="search-result-icon">📬</span>
+          <span class="search-result-text">Contact</span>
+        </a>
+      </div>
+      <div class="search-hint">Navigate with ↑↓ · Select with Enter · Close with Esc</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
