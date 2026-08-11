@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Intent → AI → Live Prototype | Yuvraj Chauhan</title>
+    <meta name="description" content="Figma + Animation MD + MCP + Framer Workflow">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="guide-template.css">
+</head>
+
+<body>
+
+    <div id="progress-bar"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-left">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+            <a class="logo" href="../index.html">YC</a>
+            <span class="logo-divider">/</span>
+            <span class="logo-text">Workflows</span>
+        </div>
+        <div class="navbar-center">
+            <button class="search-trigger" id="search-trigger" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                </svg>
+                <span>Search docs...</span>
+                <kbd>⌘K</kbd>
+            </button>
+        </div>
+        <div class="navbar-right">
+            <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="nav-link-top"
+                title="GitHub projects coming soon...">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+            </a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" style="display:none">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ========== LAYOUT ========== -->
+    <div class="layout">
+
+        <aside class="sidebar-left" id="sidebar-left">
+            <nav>
+                <div class="nav-section">
+                    <span class="nav-label">Navigation</span>
+                    <a href="../index.html" class="sidebar-link">
+                        <span class="sidebar-link-icon">🏠</span> Back to Home
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <span class="nav-label">Guides</span>
+                    <a href="website-redesign.html" class="sidebar-link">
+                        <span class="sidebar-link-icon">🎨</span> Website Redesign Kit
+                    </a>
+                    <a href="vibe-coder.html" class="sidebar-link">
+                        <span class="sidebar-link-icon">⚡</span> Vibe Coder Kit
+                    </a>
+                    <a href="ai-figma-mcp.html" class="sidebar-link">
+                        <span class="sidebar-link-icon">🔗</span> AI + Figma MCP
+                    </a>
+                    <a href="figma-framer-mcp.html" class="sidebar-link active">
+                        <span class="sidebar-link-icon">✨</span> Figma + Framer MCP
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="content guide-content" id="main-content">
+            <div class="guide-breadcrumb">
+                <a href="../index.html">Home</a>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+                <span>Guides</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+                <span>Figma + Framer MCP</span>
+            </div>
+
+            <header class="guide-header">
+                <h1>Design Intent → AI → Live Prototype</h1>
+                <div class="guide-meta">
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg> Free to use</span>
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg> 15 min read</span>
+                </div>
+            </header>
+
+            <p class="subtitle">Figma + Animation MD + MCP + Framer Workflow</p>
+
+            <p>Complete step-by-step guide for connecting Figma and Framer to an MCP-compatible AI and using a Figma
+                frame + animation specification to build the live Framer implementation.</p>
+
+            <div class="callout callout-info">
+                <div class="callout-title">Workflow Overview</div>
+                <p>The workflow connects <strong>Figma → AI/MCP → Framer Custom MCP</strong>, then uses the Figma frame,
+                    Framer project and <strong>Animate.md</strong> as the implementation inputs.</p>
+            </div>
+
+            <div class="callout callout-warning">
+                <div class="callout-title">Security Warning</div>
+                <p>A Personal Access Token is a credential. Never publish a live token in documentation, repositories,
+                    screenshots or public chats. Revoke and regenerate it if exposed.</p>
+            </div>
+
+            <h2 id="figma-setup">Figma Setup</h2>
+
+            <h3><span class="step-number">1</span> Step 1: Open Figma Account Settings</h3>
+            <p>Open your Figma account. Go to Account Settings → Security. Find the Personal Access Token section and
+                click Generate.</p>
+            <div class="guide-image"><img src="../images/Security_Section_tab.png" alt="Security Section Tab"></div>
+
+            <h3><span class="step-number">2</span> Step 2: Configure MCP Connection Permissions</h3>
+            <p>The MCP connection permission box will open. Give the AI the permissions it needs. For this workflow,
+                enable all available permissions.</p>
+            <div class="guide-image"><img src="../images/Permission_access.png" alt="Permission Access"></div>
+
+            <h3><span class="step-number">3</span> Step 3: Set Token Expiry and Name</h3>
+            <p>Set the token expiry period. Enter any token name; using the AI name is recommended so you can identify
+                the connection later. Then click Generate Token.</p>
+            <div class="guide-image"><img src="../images/Permission_access-2.png" alt="Permission Access 2"></div>
+
+            <h3><span class="step-number">4</span> Step 4: Copy the Generated Token</h3>
+            <p>The Personal Access Token is now generated. Copy it securely. Treat this token like a credential and do
+                not share it publicly.</p>
+            <div class="guide-image"><img src="../images/token_copy.png" alt="Token Copy"></div>
+
+            <h2 id="figma-mcp">Figma MCP Connection</h2>
+
+            <h3><span class="step-number">5</span> Step 5: Send the Token to the AI and Analyze the Connected Figma File
+            </h3>
+            <p>Open an MCP-compatible AI and provide the generated Figma Personal Access Token through the AI's
+                supported MCP connection flow. Then use this prompt:</p>
+
+            <div class="code-block" style="margin-top: 12px; margin-bottom: 24px;">
+                <div class="code-block-header"><span class="lang">Prompt</span></div>
+                <pre><code>Analyze the connected Figma file. Identify relevant pages, frames, components, typography, colors, spacing, and interaction-relevant structure. Do not modify anything yet. Return a concise implementation analysis.</code></pre>
+            </div>
+            <div class="guide-image"><img src="../images/Sent_token_ai.png" alt="Sent Token to AI"></div>
+
+            <h3><span class="step-number">6</span> Step 6: If Token Access Fails, Add the Figma MCP Server Configuration
+            </h3>
+            <p>If the AI cannot access Figma after the token is configured, provide the following Figma MCP server
+                configuration in the AI's MCP/server configuration area:</p>
+
+            <div class="code-block" style="margin-top: 12px; margin-bottom: 24px;">
+                <div class="code-block-header"><span class="lang">JSON</span></div>
+                <pre><code>{
+  "mcpServers": {
+    "Figma": {
+      "url": "https://mcp.figma.com/mcp"
+    }
+  }
+}</code></pre>
+            </div>
+            <div class="guide-image"><img src="../images/Error.png" alt="Error Screen"></div>
+
+            <h3><span class="step-number">7</span> Step 7: Verify the Resolved Figma Connection</h3>
+            <p>After adding the MCP server configuration, verify that the AI can access the connected Figma file
+                successfully.</p>
+            <div class="guide-image"><img src="../images/Error_resolved.png" alt="Error Resolved"></div>
+
+
+            <h2 id="framer-setup">Framer Setup</h2>
+
+            <h3><span class="step-number">8</span> Step 8: Create a Blank Framer Project</h3>
+            <p>Create a new blank Framer project and open it. In the Framer project, press Windows: Ctrl + K or Mac: Cmd
+                + K to open the command/plugin dialog.</p>
+            <div class="guide-image"><img src="../images/blank_framer_dialogbox.png" alt="Blank Framer Dialog Box">
+            </div>
+
+            <h3><span class="step-number">9</span> Step 9: Search for MCP in Framer</h3>
+            <p>Click the search field and type MCP. Select the MCP option.</p>
+            <div class="guide-image"><img src="../images/MCP_search.png" alt="MCP Search in Framer"></div>
+
+            <h3><span class="step-number">10</span> Step 10: Log In to Framer MCP</h3>
+            <p>When Framer asks you to log in, sign in using the same account you use for the Framer project.</p>
+            <div class="guide-image"><img src="../images/MCP_Login.png" alt="MCP Login"></div>
+
+            <h3><span class="step-number">11</span> Step 11: Copy the Custom MCP URL</h3>
+            <p>Framer will generate a Custom MCP URL. Copy it. Keep the Framer tab open; do not close the MCP dialog
+                during the connection setup.</p>
+            <div class="guide-image"><img src="../images/MCP_link.png" alt="MCP Link Generated"></div>
+
+
+            <h2 id="claude-setup">Claude Connector Setup</h2>
+
+            <h3><span class="step-number">12</span> Step 12: Open Claude Connector Settings</h3>
+            <p>In Claude, click the + icon, then go to Connectors → Add Connector. Choose Custom Connector.</p>
+            <div class="guide-image"><img src="../images/Claude_MCP_URL-1.png" alt="Claude MCP Setup 1"></div>
+
+            <h3><span class="step-number">13</span> Step 13: Add the Custom MCP Connector</h3>
+            <p>Paste the Custom MCP URL copied from Framer and provide a name for the Framer connection.</p>
+            <div class="guide-image"><img src="../images/Claude_MCP_URL-2.png" alt="Claude MCP Setup 2"></div>
+
+            <h3><span class="step-number">14</span> Step 14: Complete the Connector Configuration</h3>
+            <p>Continue through the connector configuration until the custom Framer MCP connector is added.</p>
+            <div class="guide-image"><img src="../images/Claude_MCP_URL-3.png" alt="Claude MCP Setup 3"></div>
+
+            <h3><span class="step-number">15</span> Step 15: Finish the Claude MCP Setup</h3>
+            <p>Confirm the connector setup. The Framer MCP connection should now be available to Claude.</p>
+            <div class="guide-image"><img src="../images/Claude_MCP_URL-4.png" alt="Claude MCP Setup 4"></div>
+
+            <h3><span class="step-number">16</span> Step 16: Give Claude the Framer Project Link</h3>
+            <p>Send Claude the link to the blank Framer project and instruct it: <strong>"Analyze the current
+                    project."</strong> This lets the AI verify that it can communicate with the live Framer project.</p>
+            <div class="guide-image"><img src="../images/Framer_Project_connect_verify.png" alt="Verify Connection">
+            </div>
+
+            <h3><span class="step-number">17</span> Step 17: Verify Framer + Figma Connectivity</h3>
+            <p>Confirm that the AI can access both the Figma source/design context and the Framer destination project.
+            </p>
+            <div class="guide-image"><img src="../images/Connected_Successfull-1.png" alt="Success Status 1"></div>
+
+            <h3><span class="step-number">18</span> Step 18: Connection Successful</h3>
+            <p>At this point, the Figma and Framer connections are successfully established. You can now use the AI to
+                translate design intent into the connected Framer project.</p>
+            <div class="guide-image"><img src="../images/Connected_Successfull-2.png" alt="Success Status 2"></div>
+
+            <h2 id="animation-md">Animation MD & Implementation</h2>
+
+            <h3><span class="step-number">19</span> Step 19: Prepare the Animation Requirement</h3>
+            <p>For example, your Figma screen may require a continuously animated marquee/marketing-text effect in the
+                background and a rounded circular interaction that follows or appears beneath the mouse pointer on
+                hover. Document the intended behavior clearly in an Animate.md file.</p>
+            <div class="guide-image"><img src="../images/Sample_figma_screen.png" alt="Sample Figma Screen"></div>
+
+            <div class="callout callout-tip">
+                <div class="callout-title">Animate.md Details</div>
+                <p>Animate.md should describe: goal, target frame, animation behavior, timing/speed, easing, looping,
+                    hover states, mouse interaction, responsive behavior, layering, performance requirements, and
+                    acceptance criteria.</p>
+            </div>
+
+            <h3><span class="step-number">20</span> Step 20: Give the AI the Figma Frame + Animation MD</h3>
+            <p>Provide the AI with:</p>
+            <ul>
+                <li>The Animate.md file containing the effect and animation explanation.</li>
+                <li>The connected Framer project link.</li>
+                <li>The connected Figma frame link.</li>
+            </ul>
+            <p>Then instruct the AI to build the live Framer implementation based on the Figma screen and the behavior
+                documented in the MD file.</p>
+            <p><strong>Implementation concept:</strong> The Figma frame is the visual reference, Animate.md is the
+                behavior specification, and the connected Framer project is the implementation target.</p>
+            <div class="guide-image"><img src="../images/Final_prompt_&_files.png" alt="Final Prompt Screen"></div>
+
+            <h3><span class="step-number">21</span> Step 21: Keep the Framer MCP Running</h3>
+            <p>After the connection is established, keep the Framer MCP running. The green dot beside the MCP URL
+                indicates that the MCP server is running. Keep this state active while the AI is working.</p>
+            <div class="guide-image"><img src="../images/MCP_background_running.png" alt="MCP Background Running"></div>
+
+            <div class="callout callout-warning">
+                <div class="callout-title">Connection warning</div>
+                <p>Keep the Framer MCP running. The green indicator beside the MCP URL means the MCP server is active.
+                </p>
+            </div>
+
+            <h2 id="final-checklist">Final Connection Checklist</h2>
+            <ul class="checklist">
+                <li>Figma Personal Access Token generated.</li>
+                <li>Required Figma permissions enabled.</li>
+                <li>Figma MCP server JSON configured if required.</li>
+                <li>Figma analysis prompt sent without modifying the file.</li>
+                <li>Blank Framer project created.</li>
+                <li>Framer Custom MCP URL generated.</li>
+                <li>Custom connector added in Claude/MCP-compatible AI.</li>
+                <li>Framer project link shared with the AI.</li>
+                <li>Figma frame link shared with the AI.</li>
+                <li>Animate.md shared with the AI.</li>
+                <li>Framer MCP green indicator remains running.</li>
+                <li>Final Framer implementation checked against the Figma visual reference and animation requirements.
+                </li>
+            </ul>
+
+            <div class="callout callout-tip">
+                <div class="callout-title">Documentation recommendation</div>
+                <p>Your Animate.md can be created with any capable AI. Kimi K3 can be used when you want a detailed
+                    documentation/specification output.</p>
+            </div>
+
+            <div class="guide-nav">
+                <a href="ai-figma-mcp.html" class="guide-nav-item prev">
+                    <div class="guide-nav-label">← Previous Guide</div>
+                    <div class="guide-nav-title">AI + Figma MCP Guide</div>
+                </a>
+                <div class="guide-nav-item next" style="visibility:hidden"></div>
+            </div>
+
+            <!-- ========== FOOTER ========== -->
+            <footer class="footer" id="footer">
+                <p class="footer-brand">Yuvraj Chauhan</p>
+                <p class="footer-role">AI Designer | Developer</p>
+                <p class="footer-tagline">Learn Together • Design Together • Build Together</p>
+                <p class="footer-desc">Helping creators build better products using AI.</p>
+            </footer>
+
+        </main>
+
+        <aside class="sidebar-right" id="sidebar-right">
+            <span class="toc-title">On This Page</span>
+            <a href="#figma-setup" class="toc-link" data-toc="figma-setup">Figma Setup</a>
+            <a href="#figma-mcp" class="toc-link" data-toc="figma-mcp">Figma MCP Connection</a>
+            <a href="#framer-setup" class="toc-link" data-toc="framer-setup">Framer Setup</a>
+            <a href="#claude-setup" class="toc-link" data-toc="claude-setup">Claude Setup</a>
+            <a href="#animation-md" class="toc-link" data-toc="animation-md">Animation & Impl</a>
+            <a href="#final-checklist" class="toc-link" data-toc="final-checklist">Final Checklist</a>
+        </aside>
+
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>
