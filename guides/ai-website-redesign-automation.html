@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Website Redesign Automation Tool | Yuvraj Chauhan</title>
+  <meta name="description"
+    content="Setup & Run Guide for AI Website Redesign Automation - Automate website redesign lead generation.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="guide-template.css">
+</head>
+
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-left">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+      <a class="logo" href="../index.html">YC</a>
+      <span class="logo-divider">/</span>
+      <span class="logo-text">Workflows</span>
+    </div>
+    <div class="navbar-center">
+      <button class="search-trigger" id="search-trigger" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <span>Search docs...</span>
+        <kbd>⌘K</kbd>
+      </button>
+    </div>
+    <div class="navbar-right">
+      <a href="#" onclick="alert('GitHub projects coming soon!'); return false;" class="nav-link-top"
+        title="GitHub projects coming soon...">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+        </svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" style="display:none">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ========== LAYOUT ========== -->
+  <div class="layout">
+
+    <aside class="sidebar-left" id="sidebar-left">
+      <nav>
+        <div class="nav-section">
+          <span class="nav-label">Navigation</span>
+          <a href="../index.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🏠</span> Back to Home
+          </a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Guides</span>
+          <a href="ai-website-redesign-automation.html" class="sidebar-link active">
+            <span class="sidebar-link-icon">🤖</span> AI Website Redesign Automation Tool
+          </a>
+          <a href="website-redesign.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🎨</span> Website Redesign Kit
+          </a>
+          <a href="vibe-coder.html" class="sidebar-link">
+            <span class="sidebar-link-icon">⚡</span> Vibe Coder Kit
+          </a>
+          <a href="ai-figma-mcp.html" class="sidebar-link">
+            <span class="sidebar-link-icon">🔗</span> AI + Figma MCP
+          </a>
+          <a href="figma-framer-mcp.html" class="sidebar-link">
+            <span class="sidebar-link-icon">✨</span> Figma + Framer MCP
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="content guide-content" id="main-content">
+      <div class="guide-breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+        <span>Guides</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+        <span>AI Website Redesign Automation Tool</span>
+      </div>
+
+      <header class="guide-header">
+        <h1>AI Website Redesign Automation</h1>
+        <div class="guide-meta">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg> Setup & Run Guide</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg> 10 min read</span>
+        </div>
+      </header>
+
+      <p>For UI/UX designers and freelancers who want to automate website redesign lead generation.</p>
+
+      <div class="callout callout-tip">
+        <div class="callout-title">What this tool is for</div>
+        <p>Instead of manually redesigning every prospect's website before contacting them, the automation can process a
+          list of potential clients, analyze their existing websites, generate redesign instructions, create redesigned
+          web experiences through the configured website-generation provider, capture the results, and save the output
+          locally.</p>
+      </div>
+
+      <div style="padding: 24px 0; margin: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <h2 style="font-size: 28px; font-weight: 700; color: var(--text-1); margin-top: 0; margin-bottom: 16px; letter-spacing: -0.5px;">Tool Download & Set up</h2>
+        <p style="font-size: 18px; font-weight: 500; color: var(--text-1); line-height: 1.6;">I haven't included a public download link for this project yet. To get the project files, download the tool,
+          and receive setup assistance, please contact me personally via WhatsApp.</p>
+        <div style="margin-top: 24px;">
+          <a href="https://wa.me/919428371238" target="_blank" rel="noopener" class="btn btn-primary"
+            style="background: #25D366; color: white; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4); border: none; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 18px; padding: 12px 24px; font-weight: 600; border-radius: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            WhatsApp for Download
+          </a>
+        </div>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">API Credentials</div>
+        <p>For the private API credentials required to run this tool, please contact me personally via WhatsApp.</p>
+        <div style="margin-top: 16px;">
+          <a href="https://wa.me/919428371238" target="_blank" rel="noopener" class="btn btn-primary"
+            style="background: #25D366; color: white; box-shadow: 0 2px 12px rgba(37, 211, 102, 0.3); border: none; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Request Credentials
+          </a>
+        </div>
+      </div>
+
+      <h2 id="complete-journey">The Complete Journey</h2>
+      <p><strong>Client CSV → Website Analysis → Redesign Prompt → Website Generation → Screenshot → Local
+          Storage</strong></p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">Important</div>
+        <p>This guide is intentionally focused on setup and usage. The project ZIP contains the deeper technical
+          documentation and implementation details. Use this page when you simply want to get the tool running.</p>
+      </div>
+
+      <h2 id="step-01"><span class="step-number">01</span> Open the Project in Antigravity</h2>
+      <p>Extract the project ZIP and open the extracted project folder in <strong>Antigravity IDE</strong>. This is the
+        working project that the AI agent will configure and run for you.</p>
+      <p>Then open the Agent panel and use the following instruction:</p>
+      <div class="code-block" style="margin-top: 12px; margin-bottom: 0;">
+        <pre><code>Truncate the project and provide a fresh new start</code></pre>
+      </div>
+      <p><strong>Why this step matters:</strong> This tells the coding agent to treat the project as a fresh working
+        setup rather than assuming that an old local runtime, previous configuration, or previous execution state is
+        still valid.</p>
+      <img src="../images/Trunket_project.png" alt="Trunket_project.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-02"><span class="step-number">02</span> Create Your Google Stitch API Key</h2>
+      <p>Open <strong>Google Stitch</strong> in a new browser tab. Go to your account settings and scroll down until you
+        find the <strong>Create API</strong> option.</p>
+      <img src="../images/Google_stitch.png" alt="Google_stitch-1.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+      <p>Generate a new API key and copy it. This key is required because the automation uses your Google Stitch account
+        to generate the redesigned website.</p>
+      <img src="../images/API_Key.png" alt="API_Key.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+      <div class="callout callout-warning">
+        <div class="callout-title">Keep the API key private</div>
+        <p>Do not paste the API key into a public document, GitHub repository, screenshot, or public website. Only add
+          it to your local environment configuration.</p>
+      </div>
+
+      <h2 id="step-03"><span class="step-number">03</span> Create the Environment Configuration</h2>
+      <p>Return to Antigravity and ask the agent to create the project's <strong>.env</strong> file. The exact private
+        credentials required for your setup should be provided to the user separately.</p>
+      <div class="code-block" style="margin-top: 12px; margin-bottom: 0;">
+        <pre><code>Create the .env file and add the required project credentials.
+For the private credential values, contact me directly.</code></pre>
+      </div>
+      <img src="../images/Env_file.png" alt="Env_file.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-04"><span class="step-number">04</span> Replace the Google Stitch API Key</h2>
+      <p>Open the newly created <strong>.env</strong> file. Find the Google Stitch API-key field and replace the
+        placeholder value with the API key you generated in Step 02.</p>
+      <img src="../images/Api_Change.png" alt="Api_Change.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+      <p><strong>Check before continuing:</strong> Make sure the key is entered in the correct environment variable and
+        that there are no accidental spaces, quotation mistakes, or missing characters. Save the file before starting
+        the automation.</p>
+
+      <h2 id="step-05"><span class="step-number">05</span> Start the Automation</h2>
+      <p>Once the environment is configured, ask the Antigravity agent to check the setup documentation and start both
+        the backend pipeline and the frontend dashboard.</p>
+      <img src="../images/Project_setup_file.png" alt="Project_setup_file.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+      <div class="code-block" style="margin-top: 12px; margin-bottom: 0;">
+        <pre><code>Check project_setup.md and Start the backend pipeline and the frontend dashboard for me in the background.</code></pre>
+      </div>
+      <p>Or run the services yourself from the terminal:</p>
+      <div class="code-block" style="margin-top: 12px; margin-bottom: 0;">
+        <pre><code># Frontend Dashboard
+bash scripts/run.sh
+
+# Alternative dashboard command
+venv/bin/python dashboard/app.py
+
+# Backend Pipeline
+venv/bin/python main.py</code></pre>
+      </div>
+      <img src="../images/Automation_start.png" alt="Automation_start.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-06"><span class="step-number">06</span> Open the Automation Dashboard</h2>
+      <p>When the dashboard is running, open the local URL shown in the previous step (e.g.,
+        <strong>http://127.0.0.1:5000</strong>). The dashboard is the control point where you can see that the
+        automation is running.
+      </p>
+      <img src="../images/Automation_started.png" alt="Automation_started.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-07"><span class="step-number">07</span> Verify That the Automation Is Running</h2>
+      <p>After opening the dashboard URL, you should be redirected to the local automation interface. This is where you
+        can visually verify that the application is active and ready to process your client list.</p>
+      <img src="../images/By_click_on_the_url_you_will_redirect_onthis.png"
+        alt="By_click_on_the_url_you_will_redirect_onthis.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-08"><span class="step-number">08</span> Upload Your Website List</h2>
+      <p>Now prepare the bulk list of potential freelance leads in the CSV format supported by the project. The CSV
+        contains the website/client information that the automation will process.</p>
+      <p>For the first test, use a small list rather than a large production file. Confirm that one or two websites
+        complete successfully before processing the full lead list.</p>
+      <img src="../images/Automation_will_start_on_this_CSV.png" alt="Automation_will_start_on_this_CSV.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-09"><span class="step-number">09</span> Let the Automation Process the Leads</h2>
+      <p>After the CSV is provided, the automation handles the repetitive workflow for each website.</p>
+
+      <h2 id="step-10"><span class="step-number">10</span> Find the Generated Results</h2>
+      <p>The automation stores the generated redesign prompts and website-related outputs locally on your computer. Use
+        the project's configured output folders to review the results.</p>
+      <img src="../images/Store_locally_on_pc.png" alt="Store_locally_on_pc.png"
+        style="max-width: 100%; height: auto; border-radius: 8px; margin: 16px 0; border: 1px solid var(--border);">
+
+      <h2 id="step-11"><span class="step-number">11</span> Review the Redesigned Website</h2>
+      <p>The generated website can also be reviewed inside your Google Stitch account. This gives you the full generated
+        design rather than only the local screenshot/output.</p>
+
+      <h2 id="quick-start-checklist">Quick Start Checklist</h2>
+      <ul class="checklist">
+        <li>Project extracted and opened in Antigravity</li>
+        <li>Fresh project start completed</li>
+        <li>Google Stitch API key generated</li>
+        <li>.env created</li>
+        <li>Private credentials added securely</li>
+        <li>Google Stitch API key added to .env</li>
+        <li>Dashboard and backend started</li>
+        <li>Local dashboard opens successfully</li>
+        <li>CSV uses the provided format</li>
+        <li>First test performed with a small list</li>
+        <li>Generated prompt and website output verified</li>
+      </ul>
+
+      <div class="guide-nav">
+        <div class="guide-nav-item prev" style="visibility:hidden"></div>
+        <a href="website-redesign.html" class="guide-nav-item next">
+          <div class="guide-nav-label">Next Guide</div>
+          <div class="guide-nav-title">Website Redesign Master Kit →</div>
+        </a>
+      </div>
+
+      <!-- ========== FOOTER ========== -->
+      <footer class="footer" id="footer">
+        <p class="footer-brand">Yuvraj Chauhan</p>
+        <p class="footer-role">AI Designer | Developer</p>
+        <p class="footer-tagline">Learn Together • Design Together • Build Together</p>
+        <p class="footer-desc">Helping creators build better products using AI.</p>
+      </footer>
+
+    </main>
+
+    <aside class="sidebar-right" id="sidebar-right">
+      <span class="toc-title">On This Page</span>
+      <a href="#complete-journey" class="toc-link" data-toc="complete-journey">Complete Journey</a>
+      <a href="#step-01" class="toc-link" data-toc="step-01">01 Open Project</a>
+      <a href="#step-02" class="toc-link" data-toc="step-02">02 Stitch API Key</a>
+      <a href="#step-03" class="toc-link" data-toc="step-03">03 Env Config</a>
+      <a href="#step-04" class="toc-link" data-toc="step-04">04 Add Key</a>
+      <a href="#step-05" class="toc-link" data-toc="step-05">05 Start Automation</a>
+      <a href="#step-06" class="toc-link" data-toc="step-06">06 Open Dashboard</a>
+      <a href="#step-07" class="toc-link" data-toc="step-07">07 Verify Running</a>
+      <a href="#step-08" class="toc-link" data-toc="step-08">08 Upload Leads</a>
+      <a href="#step-09" class="toc-link" data-toc="step-09">09 Process Leads</a>
+      <a href="#step-10" class="toc-link" data-toc="step-10">10 Find Results</a>
+      <a href="#step-11" class="toc-link" data-toc="step-11">11 Review Redesign</a>
+      <a href="#quick-start-checklist" class="toc-link" data-toc="quick-start-checklist">Quick Start Checklist</a>
+    </aside>
+
+  </div>
+
+  <script src="../app.js"></script>
+</body>
+
+</html>
